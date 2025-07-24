@@ -1,0 +1,82 @@
+---
+layout: none
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p style="text-align:center; max-width:600px; margin:auto;">
+      Welcome to my personal site. I'm a [your profession] passionate about [what you love]. Scroll down to see more!
+    </p>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="card">
+      <h3>Job Title - Company</h3>
+      <p><strong>2022 – Present</strong></p>
+      <p>Brief description of what you do.</p>
+    </div>
+    <div class="card">
+      <h3>Previous Role - Company</h3>
+      <p><strong>2019 – 2021</strong></p>
+      <p>Another experience summary here.</p>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="card">
+      <h3>Blog Post Title 1</h3>
+      <p><em>July 24, 2025</em></p>
+      <p>This is a short intro to your first blog post. Add a link to the full version if needed.</p>
+    </div>
+    <div class="card">
+      <h3>Blog Post Title 2</h3>
+      <p><em>June 15, 2025</em></p>
+      <p>Second blog teaser. Consider using a posts collection if your blog grows!</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-status" style="text-align:center; margin-top:1rem; color:green;"></p>
+  </section>
+
+  <footer>
+    &copy; 2025 [Your Name]. All rights reserved.
+  </footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      document.getElementById('form-status').textContent = 'Message sent! (Not really — form is static)';
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
